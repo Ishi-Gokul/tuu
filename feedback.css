@@ -1,0 +1,168 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./assets/eric-masur-vVLTtOG12sA-unsplash.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000ea;
+    overflow-x: hidden;
+    position: relative; /* Needed for the overlay */
+    font-family: popins sans-serif;
+  }
+  
+  /* Dark overlay using ::before pseudo-element */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 41, 41, 0.5); /* Adjust opacity for darkness level */
+    z-index: 0; /* Ensures it stays behind any content */
+  }
+  
+  /* Content to appear above overlay */
+  .container {
+    position: relative;
+    z-index: 1; /* Ensures content appears above the overlay */
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+  }
+  
+  /* Form Container */
+.form-container {
+    width: 85vw;
+    max-width: 700px;
+    background: rgba(3, 3, 3, 0.527);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  
+  /* Feedback Form */
+  .feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Question Row */
+  .question-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  /* Question Text */
+  .question-container {
+    flex: 1.5;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  /* Emoji Container */
+  .emoji-container {
+    flex: 2.5;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+/* Emoji Button Styles */
+.emoji-btn {
+    background: none;
+    border: 2px solid transparent; /* Add transparent border for layout consistency */
+    border-radius: 8px; /* Round the corners slightly */
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: transform 0.2s ease-in-out, color 0.2s, border 0.2s;
+    padding: 10px;
+  }
+  
+  /* Selected Emoji Style with Gradient Border */
+  .emoji-btn.selected {
+    color: white;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#000, #000), linear-gradient(135deg, #ff6f91, #ff9671); /* Gradient */
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 8px;
+    transform: scale(1.1);
+  }
+  
+  .emoji-btn:hover:not(.selected) {
+    transform: scale(1.05); /* Slightly enlarge on hover if not selected */
+  }
+  
+  /* Emoji Label */
+  .emoji-label {
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 5px;
+  }
+  
+  /* Yes/No Container */
+  .yesno-container {
+    display: flex;
+    gap: 15px;
+    width: 50%;
+  }
+  
+  /* Yes/No Button Styles */
+  .yesno-btn {
+    padding: 8px 20px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .yesno-btn:hover, .yesno-btn.selected {
+    background-color: #ff6f91;
+    transform: scale(1.1);
+  }
+  
+  /* Submit Button */
+  .submit-btn-container {
+    margin-top: 20px;
+  }
+  
+  .submit-btn {
+    padding: 10px 40px;
+    font-size: 1.2rem;
+    background-color: #ce1742;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #ff9671;
+    transform: translateY(-3px);
+  }

@@ -1,0 +1,138 @@
+/* app.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./assets/eric-masur-vVLTtOG12sA-unsplash.jpg) no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000ea;
+  overflow-x: hidden;
+  position: relative; /* Needed for the overlay */
+  font-family: popins sans-serif;
+}
+
+/* Dark overlay using ::before pseudo-element */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(42, 41, 41, 0.5); /* Adjust opacity for darkness level */
+  z-index: 0; /* Ensures it stays behind any content */
+}
+
+/* Content to appear above overlay */
+.container {
+  position: relative;
+  z-index: 1; /* Ensures content appears above the overlay */
+  color: white;
+  text-align: center;
+}
+
+  
+  /* Landing Page Container */
+  .landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+  }
+  
+  /* Content Box (Frosted Glass Effect) */
+  .content-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  /* Logo Container */
+  .logo-container {
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 120px;
+    height: auto;
+  }
+  
+  /* Welcome Text */
+  .welcome-text {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .beyonders-text {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+  }
+  
+  /* Description */
+  .description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Start Button */
+  .start-btn {
+    background-color: #ce1742;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s;
+  }
+  
+  .start-btn:hover {
+    background-color: #ff9671;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 150, 113, 0.5);
+  }
+  
+  /* Media Query for Smaller Screens */
+  @media (max-width: 768px) {
+    .content-box {
+      padding: 20px;
+      max-width: 90%;
+    }
+  
+    .welcome-text {
+      font-size: 1.5rem;
+    }
+  
+    .description {
+      font-size: 0.9rem;
+    }
+  
+    .start-btn {
+      font-size: 1rem;
+      padding: 10px 30px;
+    }
+  
+    .logo {
+      width: 100px;
+    }
+  }
+  
